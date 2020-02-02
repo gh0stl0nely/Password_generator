@@ -9,16 +9,30 @@ var special_array = special.split('');
 function randomizeLength(){
     document.getElementById("length").value = Math.floor(Math.random() * (129 - 8) + 8);
 }
+
+function checkForNumber(string){
+    for(var i = 0; i < string.length; i++){
+        if(isNaN(string.charAt(i))){
+            alert('Length cannot contain letter. Please enter number only.');
+            document.getElementById("length").value = "";
+            break;
+        }
+    }
+}
 function generate(){
-    //
-    var length = document.getElementById("length").value;
+    
+    var length = document.getElementById("length").value; // this is a string
+
+    checkForNumber(length); // Helper function, makes sure the password length entered by user doesn't have a letter
+
     var isLower = document.getElementById("lower").checked;
     var isUpper = document.getElementById("upper").checked;
     var isNumber = document.getElementById("number").checked;
     var isSpecial = document.getElementById("special").checked;
 
     if(length < 8 || length > 128){
-        alert('Please enter a password length between 8 and 128');
+        alert('Please enter a password length between 8 and 128 or click Randomize length');
+        document.getElementById("length").value = "";
     } else if(!isLower && !isUpper && !isNumber && !isSpecial) {
        alert('Please select at least one criteria')
     }  else {
