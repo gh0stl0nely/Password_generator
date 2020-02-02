@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="logic.js"></script>
+    <title>Password Generator</title>
+
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <!-- -->
+    <br>
+    <br>
+    <hr class="new">
+    <br>
+    <hr class="new">
+    <form>
+        <div>
+        <!--First Question-->
+          <br>
+          <div style="text-align: center">How long do you want your password to be?
+                <a href="#" data-toggle="tooltip" data-placement="top" style="text-decoration: none;" title="Length must be between 8 and 128">ⓘ</a>
+            </div>
+          <br>
+          <input class="form-control" id="length" value="35">
+          <div class="random_button" onclick="randomizeLength()">Randomize length</div>
+
+        </div>
+
+          <br>
+
+        <!--Second Question-->
+
+          <div style="text-align: center;">What do you want to be included in the password?
+            <a href="#" data-toggle="tooltip" data-placement="top" style="text-decoration: none;" title="Select at least 1 criteria for password">ⓘ</a>
+          </div>
+            
+          <br>  
+          
+         <div class="container">
+            <div class="row">
+                <div style="text-align: center;" class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="upper"> Upper Case
+                    </label>
+                </div>
+                <div style="text-align: center;" class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="lower">Lower Case
+                    </label>
+                </div>
+                <div style="text-align: center;" class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="number">Number
+                    </label>
+                </div>
+                <div style="text-align: center;" class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="special">Special Character
+                    </label>
+                </div>
+            </div>
+         </div>
+            
+        </div>
+        
+        <br>
+        
+        <div class="generate" onclick="generate()">Generate Password</div>
+    </form>
+    <br>
+    <br>
+
+    <hr class="new">
+    <br>
+    <hr class="new">
+    
+    <h2 style="text-align: center;">Your Secured Password</h2>
+
+    <div class="answerBox">   
+        <input id="result" value="" style="text-align: center; width: 90%;margin-top: 50px;background-color: rgba(121, 181, 192, 0.329);">
+    </div>
+
+    <div class="copy" onclick="copyAnswer()">Copy</div>
+</body>
+</html>

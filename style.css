@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    font-weight: bold;
+}
+
+
+html body {
+    background-color: rgba(121, 181, 192, 0.329);
+}
+
+h1{
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}
+
+hr.new{
+    margin-top: 5px;
+    border-top: 1px solid rgb(173, 131, 131);
+    border-radius: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.generate{
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    width: 30%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.answerBox{
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    width: 50%;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.copy{
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#length {
+    width: 20%; 
+    margin: 0 auto; 
+    background-color: rgba(121, 181, 192, 0.329);
+}
+
+.random_button{
+    border-style: solid;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
